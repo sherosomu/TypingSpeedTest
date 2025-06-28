@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Master</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+  <!-- Google Icons & Custom Font -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="typingtest.css" />
+</head>
+
+<body class="bgimage" style="font-family: 'Roboto Mono', monospace;">
+  <header class="text-center mt-4">
+    <h1>Typing Speed Master</h1>
+    <p style="font-size: 15px;">
+      by <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">YourName</a>
+    </p>
+  </header>
+
+  <main class="container mt-4">
+    <section class="instructions mb-4">
+      <h3>Instructions</h3>
+      <ol>
+        <li>Click <strong>Start</strong> to begin the test.</li>
+        <li>Type the given sentence exactly, including punctuation.</li>
+        <li>Press <strong>Enter</strong> or <strong>Submit</strong> to finish typing.</li>
+        <li>Press <strong>Reset</strong> or use shortcut <kbd>Alt + R</kbd> to load a new sentence.</li>
+      </ol>
+      <p class="text-muted">Type fast and track your progress!</p>
+    </section>
+
+    <section class="result_card text-center mb-4">
+      <p>Current Typing Speed<br/><span id="speed" class="speednum">- WPM</span></p>
+      <p>Highest Typing Speed<br/><span id="hspeed" class="speednum">- WPM</span></p>
+      <p>Average Typing Speed<br/><span id="avgspeed" class="speednum">- WPM</span></p>
+    </section>
+
+    <section id="clock" class="text-center mb-3">
+      <span style="font-size: 70px; color: #888;" class="material-icons-outlined">timer</span>
+      <p class="timer"><span id="timer"></span> seconds</p>
+    </section>
+
+    <section id="speedTypingTest">
+      <div class="card p-4">
+        <p id="quoteDisplay" class="mb-3"></p>
+
+        <div class="d-none mb-3" id="spinner">
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <textarea id="quoteInput" autofocus rows="6" cols="55" class="form-control mb-3"
+          placeholder="Start typing here..." onpaste="return false" ondrop="return false"></textarea>
+
+        <p id="result" class="text-center"></p>
+
+        <div class="d-flex justify-content-center gap-2">
+          <button id="submitBtn" class="btn btn-success mr-2">Submit</button>
+          <button id="resetBtn" class="btn btn-danger">Reset</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="typingtest.js"></script>
+</body>
+</html>
