@@ -10,10 +10,6 @@ A responsive typing speed test web app built using HTML, CSS, and JavaScript.
 - Timer with restart functionality
 - Clean UI and responsive design
 
-## 📸 Demo
-
-![Demo Screenshot](screenshot.png) <!-- optional -->
-
 ## 🛠 Tech Stack
 
 - HTML
@@ -22,4 +18,4 @@ A responsive typing speed test web app built using HTML, CSS, and JavaScript.
 
 ## ✍️ Author
 
-Built and modified by [Your Name](https://github.com/yourusername)
+Built and modified by Samarth https://github.com/sherosomu
